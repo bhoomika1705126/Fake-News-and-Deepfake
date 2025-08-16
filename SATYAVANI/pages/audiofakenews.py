@@ -14,6 +14,9 @@ from sklearn.linear_model import LogisticRegression
 # === Load or train model if not exists ===
 @st.cache_resource
 def load_or_train_model():
+    base_dir = os.path.join(os.path.dirname(__file__), "..")  # parent directory
+    model_path = os.path.join(base_dir, "fake_news_model.pkl")
+    vectorizer_path = os.path.join(base_dir, "vectorizer.pkl")
     if os.path.exists("fake_news_model.pkl") and os.path.exists("vectorizer.pkl"):
         model = joblib.load("fake_news_model.pkl")
         vectorizer = joblib.load("vectorizer.pkl")
@@ -127,5 +130,6 @@ if uploaded_file is not None:
             st.markdown("## 🟢 Final Verdict: This news is **REAL** and credible.")
     else:
         st.error("❌ Could not extract text from the audio.")
+
 
 
