@@ -1,5 +1,6 @@
-import os
 import streamlit as st
+st.title("Audio Analysis")
+import os
 import pandas as pd
 import joblib
 import re
@@ -127,3 +128,4 @@ if uploaded_file is not None:
             st.markdown("## 🟢 Final Verdict: This news is **REAL** and credible.")
     else:
         st.error("❌ Could not extract text from the audio.")
+
