@@ -23,15 +23,15 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     if st.button("📰 Text Analysis", use_container_width=True):
-        st.switch_page("fakenewsst.py")
+        st.switch_page("fakenewsst")
 
 with col2:
     if st.button("🎙️ Audio Analysis", use_container_width=True):
-        st.switch_page("audiofakenews.py")
+        st.switch_page("audiofakenews")
 
 with col3:
     if st.button("🎥 Video Analysis", use_container_width=True):
-        st.switch_page("deepfakeest.py")
+        st.switch_page("deepfakeest")
 
 st.write("---")
 
